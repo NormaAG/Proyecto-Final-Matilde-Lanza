@@ -1,0 +1,616 @@
+* {
+	padding:0px;
+	margin:0px 0px 0px 0px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background:#FEFEFE;
+}
+
+.menu_bar {
+	display:none;
+}
+
+header {
+	width: 100%;
+}
+header nav {
+
+	background:#023859;
+	z-index:1000;
+	max-width: auto;
+	width:100%;
+	
+}
+
+header nav ul {
+	list-style:none;
+	
+}
+
+header nav ul li {
+	display:inline-block;
+	position: relative;
+}
+
+header nav ul li:hover {
+	background:rgb(105, 10, 21);
+}
+
+header nav ul li a {
+	color:#fff;
+	display:block;
+	text-decoration:none;
+	padding: 10px;/*espacio de paredes a letras  e incono*/
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 13.5pt;
+}
+
+header nav ul li a span {
+	margin-right:1px;/*espacio de incono a letras*/
+}
+
+header nav ul li:hover .children {
+	display:block;
+}
+header nav ul li .children {
+	display: none;
+	background:#011826;
+	position: absolute;
+	width: 120%;
+	z-index:1000;
+}
+
+header nav ul li .children li {
+	display:block;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(255,255,255,.5);
+}
+
+header nav ul li .children li a {
+	display: block;
+}
+
+header nav ul li .children li a span {
+	float: right;
+	position: relative;
+	top:3px;
+	margin-right:0px;
+	margin-left: 5px;/*espacio entre submenu y otro submenu */
+}
+
+header nav ul li .caret {
+	position: relative;
+	top:3px;
+	margin-left:10px; /*espacio entre menu y otro menu */
+	margin-right:0px;
+}
+
+.header{/*primer div de sistemas scolar*/
+	color: #FFF;
+	background: #0a4661;
+	height: 40px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	margin:0px 0px -21px 0px;
+}
+.optionsBar{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+	
+}
+.optionsBar span {/*muestra usuario y su rol*/
+    color: #FFF;
+    font-size: 10pt;
+    font-family: 'GothamBook';    
+    margin-left: 30px;
+    text-transform: uppercase;
+}
+.photouser {
+    margin-left:15px;
+    width: 25px;
+    height: 25px;
+}
+.close{
+    width: 25px;
+    height: 25px;
+}
+.optionsBar a {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    margin-left: 30px;
+}
+footer {
+
+    Width: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 6px 0px 6px 0px;
+    background-color: rgb(73, 74, 77);
+	text-align: center;
+	margin-top: 20px;
+	position:fixed;
+}
+  footer a {
+	color: #fff;
+	
+  }
+
+  
+/*reponsive*/
+@media screen and (max-width: 1270px) {
+	body {
+		padding-top:80px;
+	}
+
+	.menu_bar {
+		display:block;
+		width:100%;
+		position: fixed;
+		top:0;
+		background:#E6344A;
+	}
+
+	.menu_bar .bt-menu {
+		display: block;
+		padding: 20px;
+		color: #fff;
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	.menu_bar span {
+		float: right;
+		font-size: 40px;
+	}
+
+	header nav {
+		width: 60%;
+		height: calc(100% - 80px);
+		position: fixed;
+		right:100%;
+		margin: 0;
+		overflow: scroll;
+	}
+
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+	}
+
+	header nav ul li a {
+		display: block;
+	}
+
+	header nav ul li:hover .children {
+		display: none;
+	}
+
+	header nav ul li .children {
+		width: 100%;
+		position: relative;
+	}
+
+	header nav ul li .children li a {
+		margin-left:20px;
+	}
+
+	header nav ul li .caret {
+		float: right;
+	}
+}
+@media screen and (max-width:770px){
+	form{
+		width:75%;
+	}
+	section{
+		width:95%;
+	}
+}
+@media screen and (max-width:480px){
+	form{
+		width:90%;
+	}
+}
+
+  /********************FORMULARIO*********************************************/
+
+.form_register{
+	width: 500px;
+	margin: auto;
+	margin-bottom: 90px;
+}
+.form_register h1{
+	color: #3c93b0;
+}
+hr{
+	border: 0;
+	background: #CCC;
+	height: 1px;
+	margin: 10px 0;
+	width: 80%;
+	display: block;
+}
+form{
+	background: #FFF;
+	margin: auto;
+	padding: 20px 50px;
+	border: 1px solid #d1d1d1;
+	margin-bottom:90px;
+
+}
+label{
+	display: block;
+	font-size: 12pt;
+	font-family: 'GothamBook';
+	margin: 15px auto 5px auto;
+}
+input,select{
+	display: block;
+	width: 100%;
+	font-size: 10pt;
+	padding: 5px;
+	border: 1px solid #85929e;
+	border-radius: 5px;
+}
+.notItemOne option:first-child{
+	display: none;
+}
+.btn_save{
+	font-size: 12pt;
+	background: #12a4c6;
+	padding: 10px;
+	color: #FFF;
+	letter-spacing: 1px;
+	border: 0;
+	cursor: pointer;
+	margin: 30px auto 15px auto;
+	display:block;
+	border-radius: 5px;
+	
+}
+.alert{
+	width: 100%;
+	background: #66e07d66;
+	border-radius: 6px;
+	margin: 20px auto;
+}
+.msg_error{
+	color: #e65656;
+}
+.msg_save{
+	color: #126e00;
+}
+.alert p{
+	padding: 10px;
+}
+
+/*=============== LISTA USUARIO =============*/
+#container h1{
+display: inline-block;
+padding: 5px;
+}
+.btn_new{
+display: inline-block;
+background: #239baa;
+color: #FFF;
+padding: 5px 10px;
+border-radius: 6px;
+margin: 20px;
+}
+
+table{
+border-collapse: collapse;
+font-size: 10pt;
+font-family: 'arial';
+width: 100%;
+background:#CBF0EB;
+}
+table th{
+text-align: left;
+padding: 10px;
+background: #3d7ba8;
+color: #FFF;
+}
+table tr:nth-child(odd){
+background: #FFF;
+}
+table td{
+padding: 5px;
+}
+.link_edit{
+color: #0ca4ce;
+text-decoration:none;
+}
+.link_delete{
+color: #f26b6b;
+text-decoration:none;
+}
+.data_delete{
+text-align: center;
+}
+.data_delete h2{
+font-size: 12pt;
+}
+.data_delete span{
+font-weight: bold;
+color: #4f72d4;
+font-size: 12pt;
+}
+.btn_cancel,.btn_ok{
+width: 164px;
+background: #478ba2;
+color: #FFF;
+display: inline-block;
+padding: 10px;
+border-radius: 5px;
+cursor: pointer;
+margin: 15px;
+
+}
+.btn_cancel{
+background: #12a4c6;
+
+}
+
+.data_delete form{
+
+background: initial;
+margin: auto;
+padding: 20px 50px;
+border: 0;
+
+}
+/*============ Paginador =============*/
+.paginador ul{
+padding: 5px;
+list-style: none;
+background: rgb(189, 186, 186);
+margin-top: 5px;
+display: -webkit-flex;
+display: -moz-flex;
+display: -ms-flex;
+display: -o-flex;
+display: flex;
+justify-content: flex-end;
+
+}
+.paginador a, .pageSelected{
+color: #428bca;
+border: 1px solid #ddd;
+padding: 5px;
+display: inline-block;
+font-size: 11px;
+text-align: center;
+width: auto;
+text-decoration:none;
+}
+.paginador a:hover{
+background: #ddd;
+}
+.pageSelected{
+color: #FFF;
+background: #428bca;
+border: 1px solid #428bca;
+}
+
+/*============ Buscador ============*/
+.form_search{
+display: -webkit-flex;
+display: -moz-flex;
+display: -ms-flex;
+display: -o-flex;
+display: flex;
+float: right;
+background: initial;
+padding: 10px;
+border-radius: 5px;
+margin: 10px 10px 10px 10px;
+background: #dae8e9;
+}
+.form_search .btn_search{
+background: #438999;
+color: #FFF;
+padding:10px;
+border: 0;
+cursor: pointer;
+margin-left: 10px;
+display: -webkit-flex;
+display: -moz-flex;
+display: -ms-flex;
+display: -o-flex;
+border-radius: 5px;
+}
+/*----------Foto-------------*/
+
+.prevPhoto {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    height: 100px; /*tamaño de imagen al subir en registro estudiante*/
+    border: 1px solid #CCC;
+    position: relative;
+    cursor: pointer;
+    background: url(../images/uploads/user.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin: auto;
+}
+.prevPhoto label{
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+.prevPhoto img{
+	width: 100%;
+	height: 100%;
+}
+.upimg, .notBlock{
+	display: none !important;
+}
+.errorArchivo{
+	font-size: 10px;
+	font-family: arial;
+	color: #cc0000;
+	text-align: center;
+	font-weight: bold; 
+	margin-top: 0px;
+}
+.delPhoto{
+	color: #FFF;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+	background: red;
+	position: absolute;
+	right: -10px;
+	top: -10px;
+	z-index: 10;
+}
+#tbl_list_productos img{
+	width: 50px;
+}
+.imgProductoDelete{
+	width: 175px;
+}
+/*---------Lista Alumnos--------------*/
+.img_alumno img{
+	width: 40px;
+	height: 30px;/*tamño de imgente en lista de alumnos*/
+	margin-top: 0px;
+	margin-bottom: 0px: 
+}
+
+/*============ inscripcion de alumnos ============*/
+
+.datos_alumno, .datos_inscripcion{
+	width: 100%;
+	max-width: 900px;
+	margin: auto;
+	margin-bottom:5px;/* dista*ncia entre en boton nuevo alumno y el div title_page*/
+}
+.title_page{
+	width: 100%;
+	max-width: 900px;
+	margin: auto;
+	font-size:9pt; 
+	color:#1E90FF;
+	padding-top: 12px;
+}
+.datos{
+	background-color: #c6e5f0;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: 2px solid #78909C;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.action_alumno{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+}
+
+.datos label{
+	margin: 5px auto;
+}
+.wd20{
+	width: 20%;
+}
+.wd25{
+	width: 25%;
+}
+.wd30{
+	width: 30%;
+}
+.wd40{
+	width: 40%;
+}
+.wd50{
+	width: 50%;
+}
+.wd100{
+	width: 100%;
+}
+#div_registro_alumno, #add_alumno_inscripcion { /*OCULTA EL REGISTRO DE ALUMNO*/
+	display: none;
+}
+.displayN{
+	display: none;
+}
+.textcenter{
+	text-align: center;
+}
+/*.........busqueda por fechas.....*/
+.form_search_date{
+	background-color: #cfe7ec;
+	padding: 6px;
+	display:flex;
+	justify-content:flex-start;
+	align-items: center;
+	border-radius: 6px;
+	margin: 5px auto;
+}
+.form_search_date label{
+	margin: 0 10px;
+}
+.form_search_date input {
+	width: auto;
+}
+.form_search_date .btn_view{
+	padding: 9px;
+}
+.btn_view{
+	background-color: #1faac8;
+	border: 3px;
+	border-radius: 5px;
+	cursor:pointer;
+	padding: 10px;
+	margin: 0 13px;
+	color:#fff;
+
+}
+/*============panel de control=============*/
